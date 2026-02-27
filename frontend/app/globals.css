@@ -1,0 +1,325 @@
+/* @import "tailwindcss";
+
+:root {
+  --background: #10162F;
+  --foreground: #ffffff;
+  --primary: #FFD300;
+  --primary-hover: #E5C200;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Apercu', Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.4s ease-out forwards;
+}
+
+.animate-pulse-subtle {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #10162F;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 16px;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.15);
+}
+
+.btn-primary:hover {
+  background-color: #FFDF33;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-primary:active {
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+  transform: translateY(1px);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 211, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px !important;
+  transition: all 0.15s ease !important;
+  padding: 10px 12px !important;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(255, 211, 0, 0.2) !important;
+  outline: none !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+} */
+
+@import "tailwindcss";
+
+:root {
+  --background: #FFF8E7;
+  --foreground: #10162F;
+  --primary: #5B4FE9;
+  --primary-hover: #4839D4;
+  --card-bg: #FFFFFF;
+  --border: #E5E5E5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --font-sans: var(--font-dm-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* All text dark by default */
+h1, h2, h3, h4, h5, h6, p, span, div, a {
+  color: var(--foreground);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #10162F;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #10162F;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #10162F;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.03); }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-in {
+  opacity: 0;
+  animation: slideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-pulse-subtle {
+  animation: pulse 2.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 10px 22px;
+  border-radius: 0;
+  transition: box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), background 0.15s ease;
+  cursor: pointer;
+  border: 2px solid #10162F;
+  box-shadow: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 5px 5px 0 #10162F;
+  transform: translate(-1px, -1px);
+}
+
+.btn-primary:active {
+  box-shadow: 1px 1px 0 #10162F;
+  transform: translate(1px, 1px);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 2px solid #10162F;
+  border-radius: 0;
+  transition: box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 0;
+  overflow: hidden;
+  color: var(--foreground);
+  box-shadow: none;
+}
+
+.card:hover {
+  box-shadow: 6px 6px 0 #10162F;
+  transform: translate(-2px, -2px);
+}
+
+/* Make sure card content is dark */
+.card * {
+  color: var(--foreground);
+}
+
+/* Static card — no hover effect, no transition */
+.card-static {
+  transition: none !important;
+}
+.card-static:hover {
+  box-shadow: 6px 6px 0 #10162F !important;
+  transform: none !important;
+}
+
+input, textarea {
+  background: #ffffff !important;
+  border: 2px solid var(--border) !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+  padding: 12px 16px !important;
+  color: var(--foreground) !important;
+  font-size: 16px !important;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(91, 79, 233, 0.15) !important;
+  outline: none !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(16, 22, 47, 0.4) !important;
+}
+
+.text-secondary {
+  color: rgba(16, 22, 47, 0.6) !important;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+.badge-career {
+  background: #10162F;
+  color: #ffffff !important;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-skill {
+  background: #CCE7F5;
+  color: #10162F !important;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-course {
+  background: #E3F5D3;
+  color: #10162F !important;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-free {
+  background: #D9F99D;
+  color: #10162F !important;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Nav bar styling */
+nav {
+  background: #ffffff;
+  border-bottom: 2px solid #10162F;
+  color: var(--foreground);
+}
+
+nav * {
+  color: var(--foreground) !important;
+}

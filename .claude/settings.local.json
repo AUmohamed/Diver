@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(lsof -i :3000)",
+      "Bash(lsof -i :3000 -sTCP:LISTEN)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx tsc --noEmit)",
+      "Bash(ls -d /Users/pc/Desktop/felina/frontend/app/*/)",
+      "Bash(npx tsc --noEmit --skipLibCheck)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWIwZmNkM2FlNzA3ZjZlOTY4ODE3OSIsImlhdCI6MTc3MjIxMTYyNiwiZXhwIjoxNzcyMjE1MjI2fQ._EI3bxTWOSuRIzjJq2V9LQWaDfIc8Us_oQ_sRVnsq0s\")"
+    ]
+  }
+}
